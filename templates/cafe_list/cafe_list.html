@@ -1,0 +1,9 @@
+{% if cafe_list %}
+    <ul>
+    {% for cafe in cafe_list %}
+        <li><a href="{% url 'cafe_list:detail' cafe.id %}">{{ cafe.cafeName }}</a></li>       <!--/cafe_list/{{ cafe.id }}/-->  
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>아직 등록된 카페가 없습니다.</p>
+{% endif %}
